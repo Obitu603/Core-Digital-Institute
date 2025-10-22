@@ -1,0 +1,251 @@
+ :root {
+            --primary: #0056b3; /* Deep blue from logo */
+            --secondary: #00a8e8; /* Bright accent blue */
+            --dark: #2c3e50; /* Dark blue-gray for text */
+            --light: #f8f9fa; /* Light background */
+            --accent: #ff6b35; /* Orange accent for CTAs */
+            --gray: #6c757d; /* Medium gray */
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Enrollment Section */
+        .enrollment-section {
+            width: 100%;
+        }
+
+        .enrollment-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .enrollment-image {
+            height: 100%;
+            min-height: 700px;
+            background: linear-gradient(rgba(12, 13, 14, 0.8), rgba(3, 14, 19, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            color: var(--white);
+        }
+
+        .enrollment-image h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .enrollment-image p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .enrollment-features {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .enrollment-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .enrollment-features i {
+            margin-right: 10px;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .enrollment-form-container {
+            padding: 50px 40px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .form-header p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .enrollment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.3s;
+            font-size: .6rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px rgba(0, 168, 232, 0.2);
+            outline: none;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .submit-button {
+            background-color: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 14px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #e55a2e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--gray);
+        }
+
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .enrollment-container {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .enrollment-image {
+                min-height: 300px;
+                padding: 30px;
+                text-align: center;
+            }
+            
+            .enrollment-image h2 {
+                font-size: 2rem;
+            }
+            
+            .enrollment-form-container {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .enrollment-section {
+                padding: 20px 0;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .enrollment-image {
+                min-height: 250px;
+                padding: 25px;
+            }
+            
+            .enrollment-image h2 {
+                font-size: 1.8rem;
+            }
+            
+            .enrollment-form-container {
+                padding: 30px 20px;
+            }
+            
+            .form-header h2 {
+                font-size: 1.8rem;
+            }
+        }
