@@ -11,15 +11,22 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+   <link rel="icon" type="image/png"  href="img/logon.jpg">
+
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("uv9YYGObhFfAxg0LM");
+            })();
+        </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="https://i.ibb.co/8sG2qJ2/coredigital-logo.png" alt="CoreDigital Institute" class="logo-img">
+                <img src="img/logo.png" alt="CoreDigital Institute" class="logo-img">
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -346,23 +353,23 @@
                 <div class="contact-info">
                     <h3>Get In Touch</h3>
                     <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Digital City, DC 10101</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> info@coredigital.edu</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Lina's Dream Academy, Zaria</p>
+                        <p><i class="fas fa-phone"></i> +234 9029312060</p>
+                        <p><i class="fas fa-envelope"></i> coredigitalinstitute@gmail.com</p>
                         <p><i class="fas fa-globe"></i> Available in 10+ languages</p>
                     </div>
                     
                     <div class="campus-info">
                         <h3>Our Nigerian Campus</h3>
                         <div class="contact-details">
-                            <p><i class="fas fa-university"></i> Ahmadu Bello University, Zaria</p>
-                            <p><i class="fas fa-map-marker-alt"></i> Samaru, Zaria, Kaduna State, Nigeria</p>
+                            <p><i class="fas fa-university"></i> Lina's Dream Academy, Zaria</p>
+                            <p><i class="fas fa-map-marker-alt"></i> 1-4 Chikaji Road, Zaria, Kaduna State, Nigeria</p>
                         </div>
                     </div>
                     
                     <div class="map-container">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.367636246322!2d7.654227775924337!3d11.15092405356341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11b25e6b0c7e6c3f%3A0x9a9e3b4a3d3f3e3d!2sAhmadu%20Bello%20University!5e0!3m2!1sen!2sng!4v1690000000000!5m2!1sen!2sng" 
+                            src="https://www.google.com/maps?q=Lina+Dream+Academy+Zaria&output=embed" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -374,43 +381,22 @@
                 </div>
                 <div>
                     <h3>Send Us a Message</h3>
-                    <form class="contact-form" style="margin-top: 20px;">
+                    <form class="contact-form" style="margin-top: 20px;" onsubmit="event.preventDefault(); sendMail();">
                         <div>
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div>
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div>
-                            <select required>
-                                <option value="" disabled selected>Select Your Country</option>
-                                <option value="us">United States</option>
-                                <option value="uk">United Kingdom</option>
-                                <option value="ca">Canada</option>
-                                <option value="au">Australia</option>
-                                <option value="in">India</option>
-                                <option value="ng">Nigeria</option>
-                                <option value="br">Brazil</option>
-                                <option value="de">Germany</option>
-                                <option value="other">Other</option>
-                            </select>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                         <div>
-                            <select required>
-                                <option value="" disabled selected>Course Interest</option>
-                                <option value="app">Application Packages</option>
-                                <option value="web">Web Development</option>
-                                <option value="ai">Responsible AI</option>
-                                <option value="design">Graphic Design</option>
-                                <option value="cyber">Cybersecurity</option>
-                                <option value="data">Data Science</option>
-                            </select>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <div>
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">Send Message</button>
+                        <button type="submit" id="send" class="cta-button">Send Message</button>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -454,9 +440,9 @@
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Digital City</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@coredigital.edu</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lina's Dream Academy, Zaria</li>
+                        <li><i class="fas fa-phone"></i> +234 9029312060</li>
+                        <li><i class="fas fa-envelope"></i>coredigitalinstitute@gmail.com</li>
                         <li><i class="fas fa-globe"></i> Available Worldwide</li>
                     </ul>
                 </div>
