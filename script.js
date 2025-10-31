@@ -73,3 +73,22 @@
                 header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
             }
         });
+
+       function sendMail() {
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_0hdgefa", "template_h85gi8h", parms)
+        .then(function(response) {
+            alert("Email has been sent successfully!");
+            console.log("SUCCESS", response);
+        })
+        .catch(function(error) {
+            alert("Failed to send email. Please try again.");
+            console.error("ERROR", error);
+        });
+}
