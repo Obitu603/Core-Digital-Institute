@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CoreDigital Institute</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="background-image"></div>
+    
+    <!-- Login Container -->
+    <div class="login-container">
+        <div class="glass-form">
+            <div class="form-header">
+                <h2>Welcome, Back</h2>
+                <p>Please Login to Access your dashboard</p>
+            </div>
+
+            <!-- Alerts -->
+            <div class="alert alert-success" id="successAlert">
+                <i class="fas fa-check-circle"></i>
+                <span>Login successful! Redirecting...</span>
+            </div>
+            
+            <div class="alert alert-error" id="errorAlert">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Invalid credentials. Please try again.</span>
+            </div>
+
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span class="button-text">Sign In</span>
+                    <div class="button-loader" id="buttonLoader">
+                        <div class="spinner"></div>
+                    </div>
+                </button>
+            </form>
+
+            <div class="form-footer">
+                <p>Need help? <a href="mailto:support@coredigital.edu">Contact Support</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
