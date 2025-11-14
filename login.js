@@ -149,7 +149,7 @@ function hideError() {
 
 // Redirect to admin page
 function redirectToAdmin() {
-    window.location.href = 'admin.html';
+    window.location.href = 'Admin.html';
 }
 
 // Add shake animation for failed login
@@ -167,4 +167,5 @@ document.head.appendChild(style);
 console.log('Demo Credentials:');
 console.log('Username: admin, Password: admin123');
 console.log('Username: coredigital, Password: digital2024');
+
 console.log('Username: institute, Password: core123');
